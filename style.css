@@ -1,0 +1,264 @@
+/* Variables de couleurs Pastel */
+:root {
+  --bg-color: #fdfbf7;
+  --header-bg: rgba(255, 255, 255, 0.85);
+  --primary-pink: #f7d6e0;
+  --accent-purple: #b8c0ff;
+  --accent-green: #d8f3dc;
+  --accent-blue: #e0f2fe;
+  --text-color: #4a4e69;
+  --text-dark: #22223b;
+  --card-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Header & Menu Nav Fille */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--header-bg);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+.logo-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary-pink);
+  overflow: hidden;
+  border: 2px solid white;
+}
+
+.logo-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  background-color: var(--primary-pink);
+}
+
+/* Submenu pour le Portfolio */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  min-width: 160px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  color: var(--text-dark);
+}
+
+/* Bannière d'accueil */
+.hero-banner {
+  height: 60vh;
+  background: linear-gradient(135deg, var(--primary-pink), var(--accent-purple));
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  margin-top: 70px;
+}
+
+.hero-text h1 {
+  font-size: 5rem;
+  color: var(--text-dark);
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6);
+}
+
+/* Structure générale */
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Page À Propos */
+.about-section {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.profile-pic {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--accent-green);
+}
+
+.resume-section {
+  background-color: var(--card-bg);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  margin-bottom: 30px;
+}
+
+.resume-section h2 {
+  color: var(--text-dark);
+  border-bottom: 3px solid var(--primary-pink);
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+/* Page Portfolio / Galerie */
+.intro-box {
+  background-color: var(--accent-blue);
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit);
+  gap: 30px;
+}
+
+.art-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.art-card:hover {
+  transform: translateY(-5px);
+}
+
+.art-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.art-info {
+  padding: 15px;
+}
+
+.art-info h3 {
+  margin-bottom: 8px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: var(--accent-purple);
+  padding: 3px 8px;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  margin-right: 5px;
+}
+
+/* Page CV & Contact */
+.cv-download {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.btn-download {
+  display: inline-block;
+  background-color: var(--primary-pink);
+  color: var(--text-dark);
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-download:hover {
+  background-color: var(--accent-purple);
+}
+
+/* Footer et Logo défilant */
+footer {
+  background-color: var(--card-bg);
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  border-top: 1px solid #eee;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.scroll-logo-container {
+  position: fixed;
+  bottom: 35px; /*a changer pour la hauteur du logo qui bouge*/
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 999;
+}
+
+#scroll-logo {
+  width: 40px; 
+  height: 40px; 
+  position: absolute;
+  left: 0;
+  transition: left 0.1s ease-out;
+}
