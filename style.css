@@ -149,6 +149,7 @@ header {
 }
 
 .resume-section {
+  position: relative;
   background-color: var(--card-bg);
   padding: 30px;
   border-radius: 15px;
@@ -161,6 +162,13 @@ header {
   border-bottom: 3px solid var(--primary-pink);
   display: inline-block;
   margin-bottom: 15px;
+}
+
+.contact-image {
+  position: absolute;
+  width: 60px;
+  top: 0px;
+  right: -45px;
 }
 
 /* Page Portfolio / Galerie */
