@@ -1,33 +1,17 @@
-let lastScrollY = window.scrollY;
-
 window.addEventListener('scroll', function() {
   const scrollLogo = document.getElementById('scroll-logo');
-
+  
   if (scrollLogo) {
-    // Position actuelle du scroll
-    const scrollTop = window.scrollY;
-
-    // Détection du sens du scroll
-    if (scrollTop > lastScrollY) {
-      // On descend → regarde vers la droite
-      scrollLogo.src = "droite.png";
-    } else if (scrollTop < lastScrollY) {
-      // On remonte → regarde vers la gauche
-      scrollLogo.src = "gauche.png";
-    }
-
     // Calcul de la progression du défilement
+    const scrollTop = window.scrollY;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercent = scrollTop / docHeight;
-
-    // Position horizontale
+    const scrollPercent = (scrollTop / docHeight);
+    
+    // Calcul de la position maximale autorisée (largeur de la fenêtre moins le logo)
     const maxX = window.innerWidth - scrollLogo.offsetWidth;
     const newLeft = scrollPercent * maxX;
-
-    // Déplacement du bonhomme
+    
+    // Mise à jour de la position du logo en fonction du scroll
     scrollLogo.style.left = `${newLeft}px`;
   }
-
-  // Mémorise la position actuelle
-  lastScrollY = window.scrollY;
 });
