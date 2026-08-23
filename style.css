@@ -323,72 +323,6 @@ footer {
   transition: left 0.1s ease-out;
 }
 
-/* --- ADAPTATION POUR MOBILE ET TABLETTES --- */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column; /* Place le logo au-dessus du menu */
-    padding: 15px;
-  }
-
-  .nav-links {
-    margin-top: 15px;
-    flex-wrap: wrap; /* Permet aux liens de passer à la ligne si besoin */
-    justify-content: center;
-    gap: 10px; /* Réduit un peu l'espacement */
-  }
-
-  /* Ajustement de la bannière sur mobile */
-  
-  .hero-text h1 {
-    font-size: 3rem; /* Réduit la taille du titre */
-  }
-
-  /* Ajustement de la page À propos */
-  .about-section {
-    flex-direction: column; /* Met la photo au-dessus du texte */
-    text-align: center;
-  }
-
-  .art-grid {
-    grid-template-columns: 1fr; 
-    gap: 20px; /* Optionnel : réduit un peu l'espace entre les tuiles sur mobile */
-  }
-
-  .hero-banner {
-    padding-left: 20px;
-    justify-content: center;
-    text-align: center;
-    margin-top: 170px; /* Ajoute cette ligne pour décaler la bannière */
-  }
-
-  .page-content {
-    margin-top: 200px; 
-  }
-
-  .resume-section {
-    position: relative;
-    background-color: var(--card-bg);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-    margin-bottom: 30px;
-    margin-right: 10px;
-  }
-
-  .contact-image {
-    position: absolute;
-    width: 45px;
-    top: 0px;
-    right: -30px;
-  }
-
-  .lightbox-btn {
-    color: var(--text-dark); /* Flèche couleur gris foncé/noir */
-    border-color: var(--text-dark); /* Bordure gris foncé/noir */
-    background-color: rgba(255, 255, 255, 0.6); /* Fond blanc un peu plus opaque pour bien détacher le bouton */
-  }
-}
-
 /* Swipe image */
 
 /* La boîte qui contient l'image */
@@ -497,3 +431,69 @@ footer {
 
 .prev-lightbox { left: 20px; }
 .next-lightbox { right: 20px; }
+
+/* --- ADAPTATION POUR MOBILE ET TABLETTES --- */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Place le logo au-dessus du menu */
+    padding: 15px;
+  }
+
+  .nav-links {
+    margin-top: 15px;
+    flex-wrap: wrap; /* Permet aux liens de passer à la ligne si besoin */
+    justify-content: center;
+    gap: 10px; /* Réduit un peu l'espacement */
+  }
+
+  /* Ajustement de la bannière sur mobile */
+  .hero-text h1 {
+    font-size: 3rem; /* Réduit la taille du titre */
+  }
+
+  /* Ajustement de la page À propos */
+  .about-section {
+    flex-direction: column; /* Met la photo au-dessus du texte */
+    text-align: center;
+  }
+
+  .art-grid {
+    grid-template-columns: 1fr; 
+    gap: 20px; /* Optionnel : réduit un peu l'espace entre les tuiles sur mobile */
+  }
+
+  .hero-banner {
+    padding-left: 20px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 170px; /* Ajoute cette ligne pour décaler la bannière */
+  }
+
+  .page-content {
+    margin-top: 200px; 
+  }
+
+  .resume-section {
+    position: relative;
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    margin-bottom: 30px;
+    margin-right: 10px;
+  }
+
+  .contact-image {
+    position: absolute;
+    width: 45px;
+    top: 0px;
+    right: -30px;
+  }
+
+  .lightbox-btn {
+    color: var(--text-dark); /* Flèche couleur gris foncé/noir */
+    border-color: var(--text-dark); /* Bordure gris foncé/noir */
+    background-color: rgba(255, 255, 255, 0.6); /* Fond blanc un peu plus opaque pour bien détacher le bouton */
+  }
+}
