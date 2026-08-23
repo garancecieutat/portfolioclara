@@ -337,11 +337,7 @@ footer {
     grid-template-columns: 1fr; 
     gap: 20px; /* Optionnel : réduit un peu l'espace entre les tuiles sur mobile */
   }
-
-  .page-content {
-    margin-top: 260px; /* Au lieu de 120px sur ordi. Ajuste ce chiffre si besoin ! */
-  }
-
+  
   .hero-banner {
     padding-left: 20px;
     justify-content: center;
