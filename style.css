@@ -317,12 +317,7 @@ footer {
   }
 
   /* Ajustement de la bannière sur mobile */
-  .hero-banner {
-    padding-left: 20px;
-    justify-content: center; /* Centre le texte sur mobile */
-    text-align: center;
-  }
-
+  
   .hero-text h1 {
     font-size: 3rem; /* Réduit la taille du titre */
   }
