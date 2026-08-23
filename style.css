@@ -337,7 +337,7 @@ footer {
     grid-template-columns: 1fr; 
     gap: 20px; /* Optionnel : réduit un peu l'espace entre les tuiles sur mobile */
   }
-  
+
   .hero-banner {
     padding-left: 20px;
     justify-content: center;
@@ -357,6 +357,11 @@ footer {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
     margin-bottom: 30px;
     margin-right: 10px;
+  }
+
+  .resume-section p {
+    text-decoration: none; /* Enlève le soulignement par défaut */
+    color: var(--text-dark);
   }
 
   .contact-image {
