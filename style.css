@@ -344,4 +344,8 @@ footer {
     margin-top: 170px; /* Ajoute cette ligne pour décaler la bannière */
   }
 
+  .page-content {
+    margin-top: 120px; 
+  }
+  
 }
