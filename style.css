@@ -274,6 +274,17 @@ footer {
   vertical-align: middle; /* Aligne bien l'icône avec le texte */
 }
 
+.social-links a {
+  text-decoration: none; /* Enlève le soulignement par défaut */
+  color: var(--text-dark); /* Remplace le bleu/violet par le gris foncé de ta palette */
+  font-weight: bold; /* Met le texte en gras pour qu'on comprenne que c'est important */
+  transition: color 0.3s ease; /* Prépare une petite animation fluide pour le survol */
+}
+
+.social-links a:hover {
+  color: var(--primary-pink); /* Change la couleur en rose au survol */
+}
+
 .scroll-logo-container {
   position: fixed;
   bottom: 45px; /*a changer pour la hauteur du logo qui bouge*/
@@ -325,5 +336,16 @@ footer {
   .art-grid {
     grid-template-columns: 1fr; 
     gap: 20px; /* Optionnel : réduit un peu l'espace entre les tuiles sur mobile */
+  }
+
+  .page-content {
+    margin-top: 200px; /* Au lieu de 120px sur ordi. Ajuste ce chiffre si besoin ! */
+  }
+
+  .hero-banner {
+    padding-left: 20px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 180px; /* Ajoute cette ligne pour décaler la bannière */
   }
 }
