@@ -166,6 +166,11 @@ img {
   margin-bottom: 30px;
 }
 
+.resume-section p {
+  text-decoration: none; /* Enlève le soulignement par défaut */
+  color: var(--text-dark);
+}
+
 .resume-section h2 {
   color: var(--text-dark);
   border-bottom: 3px solid var(--primary-pink);
