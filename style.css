@@ -255,11 +255,18 @@ footer {
   border-top: 1px solid #eee;
 }
 
-.social-links a {
-  margin: 0 10px;
-  color: var(--text-dark);
-  text-decoration: none;
-  font-weight: bold;
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Remplace le " | " par un bel espace automatique */
+  margin-top: 10px;
+}
+
+.social-links img {
+  width: 17px;
+  height: 17px;
+  vertical-align: middle; /* Aligne bien l'icône avec le texte */
 }
 
 .scroll-logo-container {
