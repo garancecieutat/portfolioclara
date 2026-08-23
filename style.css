@@ -351,7 +351,7 @@ footer {
   .resume-section {
     position: relative;
     background-color: var(--card-bg);
-    padding: 30px;
+    padding: 15px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
     margin-bottom: 30px;
