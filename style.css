@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'behove'; /* C'est le petit nom que tu donnes à ta police pour l'appeler plus tard */
+  src: url('fonts/Behove.ttf') format('opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Variables de couleurs Pastel */
 :root {
   --bg-color: #fdfbf7;
@@ -39,6 +46,18 @@ header {
 img {
   max-width: 100%;
   height: auto;
+}
+
+h1, h2, h3 {
+  font-family: 'behove', cursive, sans-serif; 
+  font-weight: normal;
+}
+
+.hero-text h1 {
+  font-family: 'behove', cursive, sans-serif;
+  font-size: 5rem;
+  color: var(--text-dark);
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6);
 }
 
 .navbar {
@@ -208,10 +227,6 @@ img {
   transition: transform 0.3s;
 }
 
-.art-card:hover {
-  transform: translateY(-5px);
-}
-
 .art-card img {
   width: 100%;
   height: clamp(200px, 30vw, 300px);
@@ -367,3 +382,112 @@ footer {
     right: -30px;
   }
 }
+
+/* Swipe image */
+
+/* La boîte qui contient l'image */
+.card-image-wrapper {
+  position: relative;
+}
+
+/* Le style commun aux deux flèches */
+.nav-btn {
+  position: absolute;
+  top: 50%; /* Descend le bouton à 50% de la hauteur */
+  transform: translateY(-50%); /* Remonte le bouton de la moitié de sa propre taille pour le centrer parfaitement */
+  background-color: var(--header-bg); /* Un fond blanc un peu transparent */
+  border: 1px solid var(--accent-purple);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 1rem;
+  color: var(--text-dark);
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-btn:hover {
+  background-color: var(--primary-pink);
+}
+
+/* Placer la flèche gauche à gauche */
+.prev-btn {
+  left: 10px;
+}
+
+/* Placer la flèche droite à droite */
+.next-btn {
+  right: 10px;
+}
+
+/* --- LIGHTBOX (ZOOM IMAGE) --- */
+#lightbox {
+  display: none; /* Caché par défaut */
+  position: fixed;
+  z-index: 9999; /* Par-dessus tout le reste du site ! */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85); /* Fond noir transparent */
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#lightbox-img {
+  max-width: 90%;
+  max-height: 90vh; /* Empêche l'image de dépasser la hauteur de l'écran */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.close-lightbox {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-lightbox:hover {
+  color: var(--primary-pink);
+}
+
+.lightbox-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.lightbox-btn:hover {
+  background-color: var(--primary-pink);
+  border-color: var(--primary-pink);
+}
+
+.prev-lightbox { left: 20px; }
+.next-lightbox { right: 20px; }
