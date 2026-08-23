@@ -132,6 +132,10 @@ header {
   padding: 0 20px;
 }
 
+.page-content {
+  margin-top: 120px; 
+}
+
 /* Page À Propos */
 .about-section {
   display: flex;
@@ -273,4 +277,36 @@ footer {
   position: absolute;
   left: 0;
   transition: left 0.1s ease-out;
+}
+
+/* --- ADAPTATION POUR MOBILE ET TABLETTES --- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Place le logo au-dessus du menu */
+    padding: 15px;
+  }
+
+  .nav-links {
+    margin-top: 15px;
+    flex-wrap: wrap; /* Permet aux liens de passer à la ligne si besoin */
+    justify-content: center;
+    gap: 10px; /* Réduit un peu l'espacement */
+  }
+
+  /* Ajustement de la bannière sur mobile */
+  .hero-banner {
+    padding-left: 20px;
+    justify-content: center; /* Centre le texte sur mobile */
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem; /* Réduit la taille du titre */
+  }
+
+  /* Ajustement de la page À propos */
+  .about-section {
+    flex-direction: column; /* Met la photo au-dessus du texte */
+    text-align: center;
+  }
 }
