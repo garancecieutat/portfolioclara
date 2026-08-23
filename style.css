@@ -346,6 +346,15 @@ footer {
     padding-left: 20px;
     justify-content: center;
     text-align: center;
-    margin-top: 240px; /* Ajoute cette ligne pour décaler la bannière */
+    margin-top: 200px; /* Ajoute cette ligne pour décaler la bannière */
   }
+
+  .scroll-logo-container {
+  position: fixed;
+  bottom: 25px; /*a changer pour la hauteur du logo qui bouge*/
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 999;
+}
 }
