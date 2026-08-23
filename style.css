@@ -163,7 +163,8 @@ img {
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-  margin: 30px;
+  margin-bottom: 30px;
+  margin-right: 30px;
 }
 
 .resume-section h2 {
