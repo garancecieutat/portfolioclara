@@ -351,11 +351,11 @@ footer {
   .resume-section {
     position: relative;
     background-color: var(--card-bg);
-    padding: 15px;
+    padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
     margin-bottom: 30px;
-    margin-right: 20px;
+    margin-right: 10px;
   }
 
   .contact-image {
