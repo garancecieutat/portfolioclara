@@ -385,8 +385,9 @@ footer {
 }
 
 #lightbox-img {
-  max-width: 90%;
-  max-height: 90vh; /* Empêche l'image de dépasser la hauteur de l'écran */
+  max-width: 80%;
+  max-height: 80vh; /* Empêche l'image de dépasser la hauteur de l'écran */
+  object-fit: contain;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
